@@ -12,7 +12,8 @@ We can create Github Secrets by going  **Our repository -> Settings -> Secrets -
 
 Once we have signed the .aab file we can deploy it to the Google Play Store. Now we need to allow this GitHub Action the permission to deploy applications for us on Google Play. We use a [Service Account](https://cloud.google.com/compute/docs/access/service-accounts) .
 
-#### Creating a Service Account
+
+### Creating a Service Account
 To create a service account, we need to log in our Google Cloud Console Account. Then, on the main page , in the left hand side menu, there will be a list item titled Service Accounts. We need to go to **Service Accounts -> Create Service Account** . In the window that opens, you will have to enter in the service’s name and you can also enter a description. The name given here will be the unique identifier of this service account.
 
 - In the second step we will be asked to give this service account a role. From the **Select A Role** dropdown, choose **Basic → Editor**.
@@ -27,7 +28,8 @@ To create the key, click the three horizontal dots under the Actions label in th
 
 Once we have done so, a file will be downloaded to your computer. Make sure to keep this file as it has all the data relevant for our service account and we won’t be able to download it again. Now, we need to make Google Play aware of this service account.
 
-#### Set up Google Play Console
+
+### Set up Google Play Console
 We need to go our Google Play Console and head over to **Setup -> API Access**.
 - If we scroll down the page, we will see a section titled Service Accounts. we should be able to see the service account we created previously. Click the Grant Access link.
 - In the settings that open, head over to App permissions. Here we will choose which application this service account interacts with.
