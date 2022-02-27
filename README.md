@@ -1,4 +1,4 @@
-To automate the deployment , it requires the use of [Github Actions]([https://docs.github.com/en/actions/security-guides/encrypted-secrets]). We Will be needing to use them because:
+To automate the deployment , it requires the use of [Github Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets). We will be needing to use them because:
 - We will need to sign our application
 - We are going to give this action permission to submit our built application to the Google Play Store
 
@@ -17,7 +17,7 @@ Once we have signed the .aab file we can deploy it to the Google Play Store. Now
 To create a service account, we need to log in our Google Cloud Console Account. Then, on the main page , in the left hand side menu, there will be a list item titled Service Accounts. We need to go to **Service Accounts -> Create Service Account** . In the window that opens, you will have to enter in the service’s name and you can also enter a description. The name given here will be the unique identifier of this service account.
 
 - In the second step we will be asked to give this service account a role. From the **Select A Role** dropdown, choose **Basic → Editor**.
-- Finally, in the third step, need to fill out our email in both places under the "Grant users access to this service account" section.
+- Finally, in the third step, need to fill out our email in both places under the **Grant users access to this service account** section.
 
 After pressing the done button, we will need to create a key for this service account. The action will use this key to be identified by Google Play.
 
